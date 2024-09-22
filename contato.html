@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+        <head>
+            <title>Contato</title>
+            <meta charset="utf-8">
+            <meta name="description" content="Trabalho de PWI">
+            <meta name="keyword" content="Gabriel Araújo,Paralimpíadas,Natação">
+            <meta name="author" content="Giovanni">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="icon" type="image/jpg" href="phone.png">
+            <link rel="stylesheet" href="styles.css">
+            <script language="javascript" type="text/javascript">
+                function validar() {
+                    var nome = form2.nome.value;
+                    var email = form2.email.value;
+                    var nota = form2.nota.value;
+
+                
+                    if (nome == "") {
+                        alert("Preencha o campo com seu nome!");
+                        form2.nome.focus();
+                        return false;
+                    }
+
+                    if (email == "") {
+                        alert("Preencha o campo com seu email!");
+                        form2.email.focus();
+                        return false;
+                    }
+
+
+                    if (nome.length < 5) {
+                        alert("Digite seu nome completo");
+                        form2.nome.focus();
+                        return false;
+                    }
+
+
+                    if (nota == "") {
+                        alert("Preencha o campo colocando uma nota para o site!");
+                        form2.nota.focus();
+                        return false;
+                    }
+                }
+            </script>
+        </head>
+    <body>
+        <center>
+        <header id="header">
+            <ul id="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="destaques.html">Destaques</a></li>
+                <li><a href="desafios.html">Desafios</a></li>
+                <li><a href="medalhas.html">Medalhas</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </header>
+        </center>
+        <div class="container">
+            <form name="form2" action="deucerto.html" method="post">
+                <br>Nome: <input id="nome" name="nome" type="text" placeholder="Preencha aqui o seu Nome!"><br/><br/>
+                <br>Email: <input id="email" type="email" placeholder="Preencha aqui o seu Email!" class="input-text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" /><br/><br/>
+                <br>Nota avaliação deste site:
+                <select name="nota" id="nota"><br>
+                    <option></option>
+                    <option value="1">1😔</option>
+                    <option value="2">2🙁</option>
+                    <option value="3">3😐</option>
+                    <option value="4">4🙂</option>
+                    <option value="5">5🤩</option>
+                </select><br>
+                <br>Deixe um comentário aqui: <br>
+                <textarea cols="45" rows="19" name="comentario"></textarea>
+                <br><br>
+                <center>
+                    <input type="submit" value="Enviar" onclick="return validar()">
+                    <input type="reset" name="Limpar" value="Limpar">
+                </center>
+            </form>
+        </div>
+        <center>
+            <footer>
+                <p>Giovanni Nery 2024 - &copyTodos os direitos reservados<br>Trabalho acadêmico sem fins lucrativos</p>
+                <div align="right"> <a href="#"><img src="seta.png" width="3%"></a> </div>
+            </footer>
+        </center>
+    </body>
+</html>
